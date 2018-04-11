@@ -23,9 +23,9 @@ class Main_page(Base_page):
     def click_transfer(self):
         self.find_element(*self.transfer_loc).click()
 
-if __name__=='__main__':
-    drive = driver_configure().get_driver()
-    operation = Main_page(drive)
-    operation.click_commercial()
-    operation.click_invest()
-    operation.click_transfer()
+# if __name__=='__main__':
+#     drive = driver_configure().get_driver()
+#     operation = Main_page(drive)
+#     operation.click_commercial()
+#     operation.click_invest()
+#     operation.click_transfer()
