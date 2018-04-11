@@ -12,7 +12,7 @@ class test_appium(unittest.TestCase):
     def setUp(cls):
         cls.driver = driver_configue.driver_configure().get_driver()
 
-    def test_clickMain(self):
+    def click_webank_MainPage(self):
         operation = Main_page.Main_page(self.driver)
         operation.click_commercial()
         operation.click_invest()
@@ -22,5 +22,5 @@ class test_appium(unittest.TestCase):
     def tearDown(cls):
         cls.driver.quit()
 
-if __name__=='__main__':
-    unittest.main()
+# if __name__=='__main__':
+#     unittest.main()
