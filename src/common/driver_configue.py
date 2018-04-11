@@ -25,3 +25,6 @@ class driver_configure():
             return self.driver
         except Exception,e:
             raise e
+
+if __name__=='__main__':
+    print 'helloworld'
