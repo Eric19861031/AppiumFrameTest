@@ -9,10 +9,10 @@ from src.common.driver_configue import driver_configure
 
 class Main_page(Base_page):
     by = mobileby.MobileBy()
-    summary_loc = (by.LINK_TEXT,"总览")
-    commercial_loc = (by.LINK_TEXT,"理财")
-    invest_loc = (by.LINK_TEXT,"投资")
-    transfer_loc = (by.LINK_TEXT, "转账")
+    summary_loc = (by.XPATH,"//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]")
+    commercial_loc = (by.XPATH,"//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[2]")
+    invest_loc = (by.XPATH,"//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[3]")
+    transfer_loc = (by.XPATH, "//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[4]")
 
     def click_commercial(self):
         self.find_element(*self.commercial_loc).click()
@@ -26,4 +26,6 @@ class Main_page(Base_page):
 if __name__=='__main__':
     drive = driver_configure().get_driver()
     operation = Main_page(drive)
+    operation.click_commercial()
     operation.click_invest()
+    operation.click_transfer()
