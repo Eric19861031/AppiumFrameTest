@@ -12,7 +12,7 @@ class test_appium(unittest.TestCase):
     def setUp(cls):
         cls.driver = driver_configue.driver_configure().get_driver()
 
-    def click_webank_MainPage(self):
+    def test_ClickWebankMainPage(self):
         operation = Main_page.Main_page(self.driver)
         operation.click_commercial()
         operation.click_invest()

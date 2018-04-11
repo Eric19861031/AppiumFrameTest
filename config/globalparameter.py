@@ -12,3 +12,8 @@ test_case_path = project_path+"\\src\\test_case"
 # 测试报告存储路径，并以当前时间作为报告名称前缀
 report_path = project_path+"\\report\\"
 report_name = report_path+time.strftime('%Y%m%d%H%S', time.localtime())
+# 设置发送测试报告的公共邮箱、用户名和密码
+smtp_sever = 'smtp.qq.com'  # 邮箱SMTP服务，各大运营商的smtp服务可以在网上找，然后可以在foxmail这些工具中验正
+email_name = "yaoxiaohan@foxmail.com"  # 发件人名称
+email_password = "czazsbjwafwcbhej"  # 发件人登录密码
+email_To = "521929601@qq.com;691564039@qq.com"  # 收件人
