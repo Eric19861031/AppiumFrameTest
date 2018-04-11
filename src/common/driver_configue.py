@@ -25,7 +25,3 @@ class driver_configure():
             return self.driver
         except Exception,e:
             raise e
-
-# if __name__=='__main__':
-#     drive = driver_configure()
-#     drive.get_driver()
