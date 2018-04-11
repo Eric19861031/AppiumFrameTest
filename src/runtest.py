@@ -19,4 +19,4 @@ if __name__=='__main__':
         title='测试报告'
     )
     runner.run(suite)
-    fb.close()
+    fb.close() 
