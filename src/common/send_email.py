@@ -26,7 +26,7 @@ class send_email:
         msg['From'] = gl.email_name  #发件人
         msg['To'] = gl.email_To  #收件人列表
         try:
-            server = smtplib.SMTP_SSL(gl.smtp_sever)
+            server = smtplib.SMTP_SSL(host=gl.smtp_sever,port=465)
             server.login(gl.email_name,gl.email_password)
             server.sendmail(msg['From'],msg['To'].split(';'),msg.as_string())
             server.quit()
